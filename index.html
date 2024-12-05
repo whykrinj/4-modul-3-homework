@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Text-to-Speech and Speech-to-Text</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="flex items-center justify-center h-screen bg-gradient-to-r from-blue-500 to-blue-900">
+
+    <div class="text-center">
+        <h1 class="text-white text-3xl font-semibold mb-4">Text to Speech & Speech to Text (RU, UZ, EN)</h1>
+        
+        <textarea id="text-to-read" rows="4" cols="50" class="p-4 rounded-md mb-4" placeholder="Enter text to speak..."></textarea><br />
+
+        <!-- Speak button -->
+        <button id="speak-btn" class="bg-blue-500 text-white p-2 rounded-md hover:bg-blue-700 transition">
+            Speak
+        </button>
+
+        <!-- Pause, Resume, Stop buttons -->
+        <button id="pause-btn" class="bg-yellow-500 text-white p-2 rounded-md hover:bg-yellow-700 transition mt-4" disabled>Pause</button>
+        <button id="resume-btn" class="bg-green-500 text-white p-2 rounded-md hover:bg-green-700 transition mt-4" disabled>Resume</button>
+        <button id="stop-btn" class="bg-red-500 text-white p-2 rounded-md hover:bg-red-700 transition mt-4">Stop</button>
+
+        <!-- Speech to Text button -->
+        <button id="speech-to-text-btn" class="bg-green-500 text-white p-2 rounded-md hover:bg-green-700 transition mt-4">
+            Start Speech to Text
+        </button>
+
+        <!-- Clear Text button -->
+        <button id="clear-btn" class="bg-gray-500 text-white p-2 rounded-md hover:bg-gray-700 transition mt-4">Clear</button>
+
+        <!-- Recording Indicator -->
+        <p id="recording-indicator" class="mt-4 text-white">Stopped listening.</p>
+
+        <!-- Language Selection -->
+        <select id="language-select" class="p-2 mb-4 rounded-md">
+            <option value="en-US">English</option>
+            <option value="ru-RU">Russian</option>
+            <option value="uz-UZ">Uzbek</option>
+        </select>
+    </div>
+  
+    <script src="main.js"></script>
+
+</body>
+</html>
